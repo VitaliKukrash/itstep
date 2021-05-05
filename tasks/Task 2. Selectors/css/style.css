@@ -18,13 +18,22 @@ ins + span{
     font-weight: 900;
 }
 ins del {
-    text-shadow: 1px 2px 1px orange;
+    text-shadow: 1px 2px 1px rgb(0, 174, 255);
 }
 ins span {
     text-shadow: 10px 20px 10px red;
 }
 ins.simple  del {
     font-size: 100px;
+}
+.pink{
+    color: rgba(216, 54, 143, 0.5);
+}
+.sqr:hover{
+    color: skyblue;
+}
+.sqr{
+    color: rgba(0, 0,0, 0);
 }
 ul{
     list-style: decimal;
