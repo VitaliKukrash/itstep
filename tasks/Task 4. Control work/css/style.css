@@ -84,17 +84,24 @@ table.t1 {
   list-style-position: inside;
 
 }
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url(../fonts/robotoslab/RobotoSlab-Bold.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1{
   font-size: 24px;
-  font-family: url(../fonts/robotoslab/RobotoSlab-Bold.ttf), serif;
+  font-family:'RobotoSlab', serif;
 }
 h2{
   font-size: 18px;
-  font-family: url(../fonts/robotoslab/RobotoSlab-Light.ttf), serif;
+  font-family:'RobotoSlab', serif;
 }
 h3{
   font-size: 16px;
-  font-family: url(../fonts/robotoslab/RobotoSlab-VariableFont_wght.ttf), serif;
+  font-family:'RobotoSlab', serif;
 }
 p{
   font-size: 14px;
