@@ -1,3 +1,6 @@
+html{
+  background-color: rgb(228, 212, 212);
+}
 p{
   text-align: justify;  
 }
@@ -90,10 +93,12 @@ table.t1 {
   font-weight: normal;
   font-style: normal;
 }
-
+h1, h2, h3{
+  text-align: center;
+}
 h1{
   font-size: 24px;
-  font-family:'RobotoSlab', serif;
+  font-family:'RobotoSlab', serif; 
 }
 h2{
   font-size: 18px;
@@ -105,4 +110,25 @@ h3{
 }
 p{
   font-size: 14px;
+}
+.word{
+  font-size: 50px;
+  font-style: italic;
+  text-decoration: underline;
+  color: rgb(17, 73, 138);
+}
+.col_tag{
+  color: rgb(204, 144, 65);
+}
+.col_atr{
+   color: darkcyan;
+}
+.col_value{
+  color: chocolate;
+}
+.col_synt{
+  color: #fff;
+}
+.col_size{
+  color: rgb(72, 163, 30);
 }
