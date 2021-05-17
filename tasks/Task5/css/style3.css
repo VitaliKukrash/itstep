@@ -1,0 +1,42 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.out{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    position: relative;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+}
+.in{
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    position: relative;   
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    line-height: 100px;
+}
+.in1{
+    top: 0px;
+    left: 0px;
+}
+.in2{
+    left: 300px;
+    top: -100px;
+    
+    
+}
+.in3{
+    top: 100px;
+    left: 0px;
+}
+.in4{
+    top: 0px;
+    left: 300px;
+}
