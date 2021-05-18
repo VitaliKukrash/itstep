@@ -1,0 +1,38 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+.out{
+    width: 400px;
+    height: 400px;
+    background-color: orchid;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+}
+.in{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    position: absolute;   
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    line-height: 100px;
+}
+.in1{
+    top: -100px;
+    left: -100px;
+}
+.in2{
+    top: 400px;
+    left: -100px;
+}
+.in3{
+    top: -100px;
+    left: 400px;
+}
+.in4{
+    top: 400px;
+    left: 400px;
+}
