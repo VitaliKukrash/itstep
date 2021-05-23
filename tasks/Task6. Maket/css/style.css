@@ -6,11 +6,82 @@ html, body{
     width: 100%;
     height: 100%;
 }
+div{
+    color: #000;
+    font-size: 20px;
+    line-height: 100px;
+    text-align: center;
+}
 .main{
     width: 400px;
     height: 400px;
     background-color: orangered;
     top: calc(50% - 200px);
     left: calc(50% - 200px);
+    position: absolute;
+    float: left;
+}
+.square1{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
     position: relative;
+    float: left;
+}
+.square2{
+    width: 100px;
+    height: 100px;
+    background-color: darkgoldenrod;
+    position: relative;
+    float: left;
+}
+.square3{
+    width: 100px;
+    height: 100px;
+    background-color: deeppink;
+    position: relative;
+    float: left;
+}
+.restangle-horizontal{
+    width: 200px;
+    height: 100px;
+    background-color: chartreuse;
+    position: relative;
+    float: left;
+}
+.restangle-vertical{
+    width: 100px;
+    height: 200px;
+    background-color: cyan;
+    position: relative;
+    line-height: 200px;
+    float: left;
+}
+.second-level{
+    width: 400px;
+    float: left;
+    position: relative;
+}
+.footer{
+    width: 200px;
+    float: left;
+    position: relative;
+    /*left: 100px;
+    top: -300px;*/
+}
+.oss{
+    height: 300px;
+    background-color: gold;
+    line-height: 300px;
+    /*left: 300px;
+    top: -600px;*/
+}
+.first-level{
+    position: relative;
+    float: left;
+}
+.content{
+    width: 100px;
+    position: relative;
+    float: left;
 }
