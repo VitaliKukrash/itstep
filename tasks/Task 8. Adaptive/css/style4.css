@@ -1,0 +1,48 @@
+body, html{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.box{
+    background: rgb(172, 36, 160);
+    width: 50px;
+    margin: 5%;
+    height: 50px;
+    position: relative;
+    float: left;
+}
+@media (min-width: 768px){
+    .box{
+        width: 100%;
+        background-color: palegoldenrod;
+    }
+   .container{
+        width: 768px;
+    }
+}
+@media (min-width: 1024px){
+    .box{
+        width: 100%;
+        height: 100px;
+        background-color: peru;
+    }
+    .container{
+        width: 1024px;
+    }
+}
+@media (min-width: 1600px){
+    .box{
+        width: 100%;
+        height: 200px;
+        background-color: red;
+    }
+    .container{
+        width: 1600px;
+    }
+}
