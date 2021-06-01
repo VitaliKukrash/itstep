@@ -1,0 +1,58 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    float: left;
+}
+.header{
+    width: 98%;
+    margin: 1%;
+    height: 400px;
+    position: relative;
+    float: left;
+    background-color: aqua;
+}
+.posts, footer{
+    text-align: center;
+}
+.post-item{
+    width: 98%;
+    margin: 1%;
+    height: 200px;
+    position: relative;
+    float: left;
+    background-color: chocolate;
+}
+.footer-item{
+    width: 98%;
+    margin: 1%;
+    height: 150px;
+    position: relative;
+    float: left;
+    background-color: darkgreen;
+}
+@media (min-width: 768px) {
+    .header{
+        height: 200px;
+        background-color: rgb(34, 185, 46);
+    }
+    .post-item{
+        width: 31%;
+        background-color: crimson;
+    }
+    .footer-item{
+        width: 48%;
+        background-color: darkgoldenrod;
+    }
+}
+@media (min-width: 1280px) {
+    .header{
+        height: 150px;
+        background-color: rgb(124, 122, 236);
+    }
+}
