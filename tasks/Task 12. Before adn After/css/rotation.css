@@ -1,0 +1,28 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-color: blue;
+    box-sizing: border-box;
+    transition-timing-function: ease-in-out;
+    transition-delay: 2s;
+    transition-duration: 3s;
+    transition-property: border, width,  height, transform;
+    border: 0px solid #000;
+    
+}
+.box:hover{
+     
+    border: 100px solid blueviolet; 
+    width: 0; 
+    height: 0;
+    transform: rotate(360deg);
+}
