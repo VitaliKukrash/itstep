@@ -58,7 +58,7 @@ html,body{
         border-radius: 100%;
         position: relative;
       }
-      .eye-1:before {
+  .eye-1:before {
         content: "";
         position: absolute;
         top: 50%;
@@ -174,4 +174,57 @@ html,body{
     .end{
         left: calc(50% + 30px);
     }
-
+    .ball{
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: hotpink;
+      position: absolute;
+      top:0;
+      left: 0;
+    }
+      #catboby:target .ball{
+        animation: run 4s linear infinite,rotate 4s linear 2;
+      }
+      .nose:hover {
+        transform: rotate(360deg);
+      } 
+      .nose:hover::before{
+        background:aqua;  
+      }
+      .nose:hover::after{
+        background:aqua;  
+      }
+      #catboby:target .eye-1{
+        animation: rotate 10s linear infinite;
+      }
+      @keyframes run{
+        0%{
+            top:0;
+            left: 0;
+        }
+        25%{
+            top:0;
+            left: 180px;
+        }
+        50%{
+            top: 80px;
+            left: 180px;
+        }
+        75%{
+            top: 80px;
+            left: 0;
+        }
+        100%{
+            top:0;
+            left: 0;
+        }
+    }
+    @keyframes rotate{
+      from{
+          transform: rotate(0deg);
+      }
+      to{
+          transform: rotate(360deg);
+      }
+  }
