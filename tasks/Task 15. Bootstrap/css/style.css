@@ -193,9 +193,13 @@ header{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    position: relative;
 }
 .tech-item-pic img{
     width: 100%;
+    opacity: 1;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 .tech-item-text{
     font-size: 11px;
@@ -212,10 +216,32 @@ header{
     text-align: center;
     margin-bottom: 0;
 }
-.quote-item{
-    padding-left: 40px;
-    background: url(../img/quote.png) no-repeat;
+
+.main-info{
+    position: relative;
+    padding: 40px 85px 65px;
 }
-.guote-text{
-    padding: 20px;
+.main-info .title h2{
+    text-align: left;
+}
+.review-item{
+    padding-left: 50px;
+    background: url(../img/quote.png) no-repeat 10px 10px;
+}
+.tech-item .tech-item-pic em{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 27px;
+    height: 24px;
+    background: url(../img/zoom.png) no-repeat;
+}
+a{
+    text-decoration: none;
+}
+.tech-item .tech-item-pic a{
+    position: relative;
+    display: inline-block;
+    width: 100%;
 }
