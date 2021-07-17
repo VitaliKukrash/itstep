@@ -1,9 +1,45 @@
-.logo{
-    background-color: midnightblue;
+.blue-row{
+background-color: #365699;  
+padding-top: 37px;
+padding-bottom: 38px;;
 }
-.logo>a{
+.blue-row a, .blue-row span{
+    color: #fff; 
+}
+.white-row{
+background-color: cornsilk;
+}
+ .header a{
+    
+    text-decoration: none;
+    position: relative;
+    
+}
 
+
+.header-link{
+    display: flex;
+    min-width: 220px;
+    align-items: center;
 }
-.logo>span{
-    color: mintcream;
+.header-link a{
+    font-size: 30px;
+    width: 100%;
+}
+.header-link span{
+    width: 100%;
+}
+@media (max-width: 767px){
+    .header-link{
+        text-align: center;
+    }
+    .header-menu{
+        width: 100%;
+    }
+    .header-menu a, .header-menu span{
+        display: block;
+    }
+}
+.header-menu{
+    list-style: none;
 }
