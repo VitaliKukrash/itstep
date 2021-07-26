@@ -3,39 +3,6 @@ $blue: #365699;
 $blue_hover: #516fb5;
 $tranparent_white: rgba(161, 169, 172, 0.5);
 $black: #000;
-$black_1: #222;
-$black_2: #1a1a1a;
-$black_3: #303030;
-$font: 3px;
-$blue_white: #6C8CD5;
-$blue_light: #027ba5;
-$blue_lights: #1DA1F2;
-$blue_deep: #3C5B9B; 
-$grey:  #989898;
-$grey_1: #aaaaaa;
-$grey_2: #444;
-$grey_3: #999;
-$grey_4: #747474;
-$blue_dack: #00294e;
-$grey_light: #989898;
-$grey_medium: #666;
-$grey_hard: #333;
-$red_light: #FF0000;
-$red_1:  #E60023;
-$red_2: #fd4f57;
-$red_3: #F00;
-$white_dack: #a7a7a7;
-$white_medium: #DDD;
-$yellow_deep: #fcaf45;
-$white_1: #eee;
-$white_2: #eae;
-$white_3: #e5e5e5;
-$white_4: #c0c0c0;
-$white_5: #ededed;
-$white_6: #F2F2F2;
-$white_7: #f8f8f8;
-
-
 
 @mixin base_button {
     min-width: 240px;
@@ -48,10 +15,7 @@ $white_7: #f8f8f8;
     text-decoration: none;
     text-align: center;
 }
-@mixin large_font {
-    font-size: 34px;
-}
-@mixin fa($symbol:"") {
+@mixin fa($symbol:""){
     content: $symbol;
     font-family: "Font Awesome 5 Free";
 }

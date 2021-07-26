@@ -11,7 +11,7 @@ body{
     }
     em{
         font-weight: 900;
-        @include large_font;
+        @include large_font(20px);
     }
 }
 ul{
