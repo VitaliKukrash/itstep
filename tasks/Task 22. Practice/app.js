@@ -122,10 +122,149 @@ if (x > 0 && y > 0) {
     
 // 10. Даны 2 окружности (радиусы и центры). определить их взаимное расположение.
 
-let radiusCircle1, radiusCircle2, x1, y1, x2, y2;
+let radiusCircle1, radiusCircle2, x1, y1, x2, y2, d;
 
-if (condition) {
-    
+d = ((x1 + x2) ** 2 + (y1 + y2) ** 2) ** 0.5;
+
+if (d > (radiusCircle1 + radiusCircle2)) {
+    console.log("Окружности лежат отдельно");
+} else if (d < (radiusCircle1 - radiusCircle2)) {
+    console.log("Окружности вписаны одна в одну");
+} else if (d == (radiusCircle1 + radiusCircle2)) {
+    console.log("Окружности соприкасаются в одной точке");
 } else {
-    
+    console.log("Окружности пересекаются");
 }
+
+// 11. Пользователь вводит 2 числа и операцию (+, -, *, /). Вывести результат или сообщени о ошибке.
+
+ let number1 = 2, number2 = 3, operation = "+";
+
+ switch (o) {
+     case "+":
+        console.log(number1 + number2);
+         break;
+     case "-":
+        console.log(number1 - number2);
+        break;
+    case "*":
+        console.log(number1 * number2);
+            break;  
+    case "/":
+         if (number2 == 0)
+         console.log("Division by zero");
+         else 
+         console.log(number1/number2);
+             break;  
+     default:
+        console.log("Error");
+         break;
+ }
+
+// 12. Найти сумму первых 20 натуральных чисел кратных 5.
+
+let sum = 0, number = 0; 
+
+for (let i = 0; i < 20; ) {
+    if (number % 5 == 0) {
+        i++;
+        sum = sum + number;
+    };
+    number++;
+}   console.log("Сумма равна = " + sum, "Число равно = " + --number);
+
+// 13. Составьте программу, выводящую в консоль квадраты чисел от 10 до 20.
+
+let squareNumber3 = 0, number3 = 10;
+
+while (number3 != 21) {
+    squareNumber3 = number3 ** 2;
+    console.log(squareNumber3);
+    number3++;
+}
+
+// 14. В бригаде, работающей на уборке сена, имеется N сенокосилок.Первая сенокосилка работала m часов,
+// а каждая следующая на 10 минут больше, чем предыдущая.Сколько часов проработала вся бригада?
+
+let numberCut = 5, mHoures = 1, time = 0;
+
+mHoures = mHoures * 60;
+
+for (let i = 1; i <= numberCut; i++) {
+    time = time + mHoures;
+    console.log("Время работы " + i + "-ой косилки " + mHoures);
+    mHoures = mHoures + 10;
+    
+//    console.log(time);
+}   time = time / 60;
+    console.log("Вся бригада отработала " + time + " часов");
+
+//  15. Найти произведение двузначных нечетных чисел кратных 13.
+
+let number4 = 10, multiplication = 1;
+   
+for (number4 = 10; number4 < 99; number4++) {
+    if(number4 % 2 != 0 && number4 % 13 == 0){
+        console.log(number4);
+         multiplication *= number4;     
+    }
+    
+} console.log("произведение двузначных нечетных чисел кратных 13" + multiplication);
+
+// 16. Дан прямоугольник размерами NхM. Каждый раз от него отрезают квадрат со стороной 
+//равной меьншей стороне оставшегося прямоугольника. 
+// Например, квадрат 10х6, то сначала отрезаю 6х6, потом 4х4 и т.д. 
+//Сколько нужно сделать отрезаний до того, как получится квардрат.
+
+ let length = 10, height = 6, step = 0;
+
+while (height != length) {
+
+    step++;
+    console.log(step);
+    
+    length -= height;
+    console.log(length);
+
+    if (height == length)
+    break;
+    
+    height -= length;
+    console.log(height);
+    
+    
+
+    
+} console.log("нужно сделать " + step + " отрезаний");
+
+while (height != length) {
+    step++;
+    if (length > height) {      
+        length = length - height;
+    } else {
+        height = height - length;
+    }
+}
+
+// 18. Найти n-число в последовательности Фибоначчи (0, 1, 1, 2, 3, 5, 8 ...).
+
+let x3 = 0, y3 = 1, q = 50, temp;
+
+for(q = 2; q <= 50; q++){
+    temp = x3 + y3;
+    x3 = y3;
+    y3 = temp;
+}
+
+// 17. Пользователь задумал число от 1 до 100. Компьютер пытается его угадать (генерирует случайное число). После того, как компьютер называет число, пользователь говорит меьнше, больше или равно загадонному. Комьютер соотвественно генерирует заного число, но с учетом того, что сказал пользователь. 
+// Вывести все числа, которые сгенерировал компьютер перед тем как угадать число пользваотеля (Игра Угадай).
+
+let number5 = 87, min = 1, max = 100;
+
+do  {
+    let comp = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log
+
+    }
+
+    while(1)

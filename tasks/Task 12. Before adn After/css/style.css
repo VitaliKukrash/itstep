@@ -11,9 +11,8 @@ html,body{
     position: relative;
     display: flex;
 }
-.radio-form-item{
-    width: 100%;
-}
+
+
 input{
     display: none;
 }
