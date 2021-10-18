@@ -1,3 +1,8 @@
+import { User } from "../model/user.js";
+
 class Client extends User{
-    constructor()
+    constructor(name, login, password){
+        super(name, login, password);
+    }
 }
+export{Client};
