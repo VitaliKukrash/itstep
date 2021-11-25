@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    
+}
+
+.block{
+    height: 200px;
+    width: 200px;
+    background: blueviolet;
+    margin: 10px;
+}
+.mig{
+    background: rgba(0, 170, 238, 0.9);
+}
