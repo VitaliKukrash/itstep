@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    flex-direction: column;
+
+}
+button{
+    flex: 1;
+    margin: 5px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.field{
+    display: none;
+}
+.second-form{
+    display: none;
+}
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+   
+}
+
+td{
+    width: 100px;
+    height: 100px;
+    background: rgb(163, 20, 20);
+    
+}
