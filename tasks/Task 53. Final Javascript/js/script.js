@@ -134,3 +134,69 @@ function getElemFromArr(arrC, arrD, arrE){
 };
 
 getElemFromArr([1, 1, 3, 5], [1, 6, 7, 7], [1, 2 , 2, 7]);
+
+// 7. Дан массив и число A.
+//  Переставить элементы в массиве так, чтобы сначала стояли элементы меньшие числа A, а потом большие.
+
+function getAwithArr(arr, A){
+  let rezult = [];
+  
+  for(let i=0; i < arr.length; i++){
+    if (arr[i] > A){
+      rezult.push(arr[i]);
+    } else rezult.unshift(arr[i]);
+      
+    
+  } console.log("rezult:", rezult.join());
+  return true;
+  
+}
+
+getAwithArr ([7, -3, 3, 8, 0, 2, 6], '5');
+
+// 9. Дано предложение на русском языке. Определить, является ли оно панграммой.
+
+function isPangram(str){
+  let rezult = [];
+  let rezultRezult = [];
+  let punct = ".,:;!?-";
+  /* \s - это регулярное выражение для "пробелов", 
+  а g - это "глобальный" флаг, что означает соответствие всем \s (пробелам).
+ Отличное объяснение + можно найти here.
+В качестве дополнительной заметки вы можете заменить контент между одинарными кавычками на все, 
+что хотите, чтобы вы могли заменить пробелы любой другой строкой.
+  */
+  str=str.replace(/\s+/g, '');
+  console.log("str :", str)
+  rezult=str.split("").filter(function(item){
+    return punct.indexOf(item) == -1;
+});
+  console.log("rezult :", rezult);
+
+  for (let item of rezult) {
+    if (!rezult.includes(item)) {
+      rezultRezult.push(item);
+    } 
+    
+  } console.log("rezultRezult", rezultRezult);
+    if(rezultRezult.length == 0) {
+      console.log("Дано предложение является панграммой");
+    } else console.log("Дано предложение не является панграммой");
+
+  return true;
+}  
+
+isPangram("Эй, жлоб! Где туз? Прячь юных съёмщиц в шкаф.");
+
+// 10. Дана дата и число K. Определить день недели, который будет через K дней от данной даты.
+
+function getDateNext(date, K) {
+  let now = new Date(date);
+  let days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+  now.setDate(date.getDate() + K);
+  
+  return days[now.getDay()];
+}
+let date = new Date(2022, 0, 3)
+console.log(getDateNext(date, 3));
+
