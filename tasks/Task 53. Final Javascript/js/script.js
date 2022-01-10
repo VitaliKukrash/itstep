@@ -103,6 +103,8 @@ function getElemFromArr(arrC, arrD, arrE){
    let arrEE = [];
    let arrCDE = [];
    let count = 0;
+   let current = undefined;
+   // let rezult = 0;
 
    for (let str of arrC){
      if (!arrCC.includes(str)){
@@ -122,18 +124,55 @@ function getElemFromArr(arrC, arrD, arrE){
   arrCDE = arrCC.concat(arrDD, arrEE);
   //console.log("arrCDE :",arrCDE.concat(arrCC, arrDD, arrEE).join());
    console.log("arrCDE :",arrCDE);
-  for(let str of arrCDE){
-    if (arrCDE.includes(str)){
-     console.log("str :", str) 
-     count ++;
-     console.log("count :", count)
-    }
+   arrCDE.sort();
+   console.log("arrCDE :",arrCDE);
+  for(let i = 0; i < arrCDE.length; i++){
+  
+    if (arrCDE[i] != current){
+      if(count == 2){
+          console.log('Элементы, которые встречаются в каких-либо 2 массивах, но их нету в 3 массиве' + '---> ' + current + '<br>');
+      }
+      current = arrCDE[i];
+      count = 1; 
+    } else {
+      count++;     
+  } 
+}     
+  if(count == 2) {
+    console.log('Элементы, которые встречаются в каких-либо 2 массивах, но их нету в 3 массиве' + '---> ' + current);
   }
-  console.log("count :", count)
   return true;
 };
 
 getElemFromArr([1, 1, 3, 5], [1, 6, 7, 7], [1, 2 , 2, 7]);
+
+/*
+function count() {
+    array_elements = ["a", "b", "c", "d", "e", "a", "b", "c", "f", "g", "h", "h", "h", "e", "a"];
+
+    array_elements.sort();
+
+    var current = null;
+    var cnt = 0;
+    for (var i = 0; i < array_elements.length; i++) {
+        if (array_elements[i] != current) {
+            if (cnt > 0) {
+                document.write(current + ' comes --> ' + cnt + ' times<br>');
+            }
+            current = array_elements[i];
+            cnt = 1;
+        } else {
+            cnt++;
+        }
+    } 
+    if (cnt > 0) {
+        document.write(current + ' comes --> ' + cnt + ' times');
+    } 
+
+}
+
+count();
+*/
 
 // 7. Дан массив и число A.
 //  Переставить элементы в массиве так, чтобы сначала стояли элементы меньшие числа A, а потом большие.
@@ -199,4 +238,3 @@ function getDateNext(date, K) {
 }
 let date = new Date(2022, 0, 3)
 console.log(getDateNext(date, 3));
-
