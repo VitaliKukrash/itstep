@@ -78,10 +78,74 @@ function getFibbonachi(n) {
 ;
 getFibbonachi(8);
 // 8. Разработать функцию для вычисления НОД 2 натуральных чисел.
-// function getNOD()
+function getNOD(a, b) {
+    while (a != 0 && b != 0) {
+        if (a > b) {
+            a = a % b;
+        }
+        else {
+            b = b % a;
+        }
+    }
+    return (a + b);
+}
+;
 // 9. Дано предложение. Вывести последнее слово в предложении.
 function getLastWord(a) {
-    var str = a.split(' ');
+    var str = a.split(' '); //переменную str  задаем как массив строк
     return (str[str.length - 1]);
 }
 ;
+getLastWord("Здравствуй, Дедушка Мороз!");
+// 10. Дан массив. Найти сумму только положительных элементов массива.
+function getPositiveArray(arr) {
+    var sum = 0;
+    arr.forEach(function (item) {
+        if (item > 0) {
+            sum = sum + item;
+        }
+        ;
+    });
+    console.log("sum :", sum);
+    return sum;
+}
+;
+getPositiveArray([1, 3, 5, -4]);
+// 11. Дано предложение. Преобразуйте первую букву каждого слова строки в верхний регистр.
+function getToUpperCase(a) {
+    var str = a.split(" ").map(function (item) {
+        return item[0].toUpperCase() + item.substr(1);
+    }).join(" ");
+    console.log(str);
+    return (str);
+}
+;
+getToUpperCase("снова пошел снег");
+// 12. Проверить 2 массива на полное совпадение.
+function areArraysSame(a, b) {
+    if (a.length !== b.length) {
+        console.log("Массивы не совпадают, увы...");
+        return false;
+    }
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) {
+            console.log("Массивы не совпадают, увы...");
+            return false;
+        }
+    }
+    console.log("Массивы совпадают, ура!");
+    return true;
+}
+;
+areArraysSame([1, 2, 3], [1, 2, 3]);
+// 13. Удалить из предложения все знаки препинания (. , : ; ! ? -).
+function deletePunctuationMarks(a) {
+    var punct = ". , : ; ! ? -";
+    var str = a.split("").filter(function (item) {
+        return punct.indexOf(item) == -1;
+    }).join("");
+    console.log("str :", str);
+    return str;
+}
+;
+deletePunctuationMarks("a,g,;sdf,!sg");
