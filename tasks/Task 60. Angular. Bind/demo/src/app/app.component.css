@@ -1,3 +1,11 @@
 .hover{
     background-color: crimson;
 }
+
+div {
+    width:50px; height:50px; border:1px solid #ccc
+} 
+
+.isredbox{
+    background-color:red;
+}
