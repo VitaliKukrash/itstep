@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChildComponent} from './child.component';
 
 @Component({
   selector: 'my-app',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   // styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name:string="Vit";
+  name: string = "Tom";
 }

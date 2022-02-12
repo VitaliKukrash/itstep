@@ -1,15 +1,19 @@
-import { Input, Component, EventEmitter, Output } from '@angular/core';
+import { Component, ContentChild, ElementRef } from '@angular/core';
 
 @Component({
     selector: 'child-comp',
-    template: `<input [ngModel]="userName" (ngModelChange)="onNameChange($event)">`
-    
+    template: `<ng-content></ng-content>
+    <button (click)="change()">Изменить</button>`
 })
-export class ChildComponent { 
-    @Input() userName:string="";
-    @Output() userNameChange=new EventEmitter<string>();
-    onNameChange(model:string){
-        this.userName=model;
-        this.userNameChange.emit(model);
+export class ChildComponent{
+     
+    @ContentChild("headerContent", {static:false})
+    header: ElementRef|undefined;
+      
+    change() { 
+        if(this.header !==undefined){
+            console.log(this.header); 
+            this.header.nativeElement.textContent = "Hello to world!"; 
+        }
     }
 }
