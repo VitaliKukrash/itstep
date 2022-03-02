@@ -1,0 +1,13 @@
+<!-- <ul *ngIf="list.length > 0">
+    <li *ngFor="let item of list">{{item}}</li>
+</ul> -->
+
+<div *ngFor="let item of list" class="toast show">
+    <div class="toast-header">
+      <strong class="me-auto">{{item.name}}</strong>
+      <small>{{item.date.toLocaleString()}}</small>
+    </div>
+    <div class="toast-body">
+        {{item.text}}
+    </div>
+</div>

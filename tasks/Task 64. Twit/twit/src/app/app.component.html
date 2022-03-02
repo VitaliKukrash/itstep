@@ -1,0 +1,23 @@
+<!-- Toolbar -->
+
+<div class="toolbar">
+  <form  (submit)="createPost()">
+    <div>
+      <input type="text"  placeholder="введите Ваше имя" [(ngModel)]="name">
+    </div>
+     <div>
+      <input type="textarea" placeholder="введите Ваш комментарий имя"  [(ngModel)]="text">
+    </div>
+    <div>
+      <input type="submit" class="button">
+    </div>
+  </form>
+
+
+ <form>
+   <div>
+    <app-list [list]="arr"></app-list>
+   </div>
+ </form>
+    
+  

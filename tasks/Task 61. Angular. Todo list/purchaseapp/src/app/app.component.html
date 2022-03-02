@@ -43,6 +43,8 @@
               <th>Предмет</th>
               <th>Цена</th>
               <th>Куплено</th>
+              <th>Количество</th>
+              <th>Итого</th>
           </tr>
       </thead>
       <tbody>
@@ -50,14 +52,15 @@
               <td>{{item.purchase}}</td>
               <td>{{item.price}}</td>
               <td><input type="checkbox" [(ngModel)]="item.done" /></td>
-
-              <td>{{item.price}}*{{item.number}}</td>
+              <td>{{item.number}}</td>
+              <td>{{item.price*item.number}}</td>
 
           </tr>
       </tbody>
 
-      <tfoot *ngFor="let item of items">
-        <td>"Итого сумма покупок = amount"</td>
+      <tfoot>
+        <td colspan="4">Итого сумма покупок</td>
+        <td>{{getSum()}}</td>
     </tfoot>
 
   </table>

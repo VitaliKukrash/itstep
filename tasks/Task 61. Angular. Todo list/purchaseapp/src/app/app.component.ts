@@ -42,4 +42,19 @@ export class AppComponent {
   deleteItem(): void {
     this.items = this.items.filter(item => !item.done)
     }
+
+    filterItem(status: boolean):Item[]{
+      return this.items.filter(function(item:Item){
+          return item.done == status;
+      })
+  }
+  
+  getSum(): number{
+
+    return this.items.filter(function(item) {
+      return item.done == true;
+    }).reduce(function(sum,item){
+      return sum + item.price*item.number
+    },0)
+  }
 }
